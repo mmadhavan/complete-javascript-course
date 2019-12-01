@@ -1,0 +1,77 @@
+Javascript
+----------
+
+> Each window has a global variable and a global objects:
+  1. variable is : this
+  2. object is: window
+  
+> The above variables are creates and maintained by a global execution context.
+  
+> Javascript execution happens in two phases:
+    1. variables are assigned to undefined (which is a special value).
+    2. functions are placed in memory.
+    
+    This above process is called `hoisting`.
+    
+    This is result in wierd issues if you call a variable before its assigned.
+    
+    
+> Javascript is single threaded and synchronous.
+
+> Each function has its own execution context, i.e. each function has its own this var
+  and when the function is called, the execution context places the necessary 
+  var's in memory. 
+  
+> So, when the function is called its execution context is placed in a stack
+  known as Execution Stack (there many be many execution contexts at any given time).
+  Note: The global execution context always sits in the very end of the stack.
+  This stack pops the execution context of a function when it completes the task,
+  which means all the context variables for the function is also removed.
+
+> JS engine also has an Event Queue, where all the events (click, etc.) are placed. These
+  events are processed only when the Execution stack is empty. So, if an event takes place
+  during a long process in the Execution Stack, that event will only get processed when all
+  the processes complete. This may cause some weird behaviors.
+  Note: Events are processed by event handlers when the event is under execution.
+  
+> Coercion
+  JS tries to convert types when checking for equality
+  
+  eg:
+        "" == 0
+        -> True
+        
+        false == 0
+        -> True
+        
+        "1" == 1
+        -> True
+        
+        
+  This can cause some weird behaviours, so to avaoid that use === instead. It will strictly check
+  for the type as well.
+  
+> `this` keyword by default refers to the global object, if the `this` keyword    is declared inside a object or inside a objects function method (different      than function definition i.e. function declared independantly, even within      the object). If the `this` keyword is declared inside a independent function
+   then it referes to the global object (window)
+   
+   some examples of function method and function definition (inner function) inside an object
+   
+   
+   var _obj = {
+        "_key": function(somevar){
+            console.log(this); // here this points to _obj
+            
+            function innerfunction(){
+                console.log(this); // here this points to window
+            }
+            
+            innerfunction();
+        }
+        
+   }
+   
+> 
+   
+  
+  
+  

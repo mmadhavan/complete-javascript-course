@@ -1,7 +1,7 @@
 /*****************************
 * Variables and data types
 */
-/*
+
 var firstName = 'John';
 console.log(firstName);
 
@@ -17,18 +17,11 @@ console.log(job);
 job = 'Teacher';
 console.log(job);
 
-// Variable naming rules
-var _3years = 3;
-var johnMark = 'John and MArk';
-var if = 23;
-*/
-
-
 
 /*****************************
 * Variable mutation and type coercion
 */
-/*
+
 var firstName = 'John';
 var age = 28;
 
@@ -49,14 +42,14 @@ alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + is
 
 var lastName = prompt('What is his last Name?');
 console.log(firstName + ' ' + lastName);
-*/
+
 
 
 
 /*****************************
 * Basic operators
 */
-/*
+
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -84,7 +77,7 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older tha John');
 var x;
 console.log(typeof x);
-*/
+
 
 
 
